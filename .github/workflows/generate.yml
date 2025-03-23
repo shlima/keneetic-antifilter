@@ -29,5 +29,8 @@ jobs:
       - name: Generate YouTube
         run: make gen-youtube
 
+      - name: Generate Facebook
+        run: make gen-facebook
+
       # Commit all changed files back to the repository
       - uses: stefanzweifel/git-auto-commit-action@v5

@@ -5,6 +5,7 @@
 
 - [youtube.com](routes/youtube-ipv4.bat)
 - [instagram.com](routes/facebook-ipv4.bat)
+- [chatgpt.com](routes/chatgpt-ipv4.bat)
 
 Правила обновляются автоматически раз в сутки (при наличии изменений).
 

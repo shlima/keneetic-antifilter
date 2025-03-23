@@ -4,18 +4,25 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"strings"
 
 	"keneetic-antifilter/internal/pkg/cidr"
 	"keneetic-antifilter/internal/pkg/list_reader"
 )
 
 type Convertor struct {
-	reader *list_reader.ListReader
-	output io.Writer
+	reader       *list_reader.ListReader
+	output       io.Writer
+	skipPrefixes []string
 }
 
 func New(input io.Reader, output io.Writer) *Convertor {
-	return &Convertor{reader: list_reader.NewListReader(input), output: output}
+	reader := list_reader.NewListReader(input)
+	return &Convertor{
+		reader:       reader,
+		output:       output,
+		skipPrefixes: []string{"#", "//"},
+	}
 }
 
 func (c *Convertor) Next() error {
@@ -27,6 +34,12 @@ func (c *Convertor) Next() error {
 		return err
 	case line == "":
 		return nil
+	}
+
+	for i := range c.skipPrefixes {
+		if strings.HasPrefix(line, c.skipPrefixes[i]) {
+			return nil
+		}
 	}
 
 	ip, err := cidr.Parse(line)

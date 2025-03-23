@@ -11,11 +11,14 @@ type ListReader struct {
 
 func NewListReader(reader io.Reader) *ListReader {
 	scanner := bufio.NewScanner(reader)
-	return &ListReader{scanner: scanner}
+	return &ListReader{
+		scanner: scanner,
+	}
 }
 
 // Next returns next string
 func (f *ListReader) Next() (out string, err error) {
+
 	switch {
 	case f.scanner.Scan():
 		return f.scanner.Text(), nil

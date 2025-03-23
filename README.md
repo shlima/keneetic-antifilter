@@ -7,7 +7,7 @@
 - [instagram.com](routes/facebook-ipv4.bat)
 - [chatgpt.com](routes/chatgpt-ipv4.bat)
 
-Правила обновляются автоматически раз в сутки (при наличии изменений).
+Правила [обновляются](https://github.com/shlima/keneetic-antifilter/actions/workflows/generate.yml) автоматически раз в сутки (при наличии изменений).
 
 ## Как добавлять правила
 

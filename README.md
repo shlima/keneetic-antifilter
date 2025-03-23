@@ -1,4 +1,5 @@
 ## keenetic antifilter routing
+[![Generate](https://github.com/shlima/keneetic-antifilter/actions/workflows/generate.yml/badge.svg)](https://github.com/shlima/keneetic-antifilter/actions/workflows/generate.yml)
 
 Автоматическая генерация правил роутинга для различных онлайн сервисов.
 Используется для роутеров **keenetic**. Поддерживаемы сервисы:

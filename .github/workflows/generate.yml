@@ -32,5 +32,8 @@ jobs:
       - name: Generate Facebook
         run: make gen-facebook
 
+      - name: Generate ChatGPT
+        run: make gen-chatgpt
+
       # Commit all changed files back to the repository
       - uses: stefanzweifel/git-auto-commit-action@v5

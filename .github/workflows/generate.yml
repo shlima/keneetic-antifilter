@@ -1,9 +1,11 @@
 name: Generate
 
-on: push
+on:
+  schedule:
+    - generate: '0 4 * * *'
 
 jobs:
-  format-code:
+  generate:
     runs-on: ubuntu-latest
 
     permissions:

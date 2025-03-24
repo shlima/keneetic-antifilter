@@ -24,8 +24,15 @@ gen-chatgpt:
 gen-medium:
 	bin/antifilter cidr/medium_cidr4.txt routes/medium-ipv4.bat
 
-# make build gen-all
+# make build gen-all slice-routes
 gen-all: gen-youtube
 gen-all: gen-facebook
 gen-all: gen-chatgpt
 gen-all: gen-medium
+
+slice-routes:
+	@rm routes/all-ipv4-*
+	@cat routes/*-ipv4.bat | split -l 1024 - routes/all-ipv4-
+	@for f in routes/all-ipv4-*; do \
+		mv "$$f" "$${f%*}.bat"; \
+	done

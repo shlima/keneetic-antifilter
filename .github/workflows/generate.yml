@@ -33,5 +33,8 @@ jobs:
       - name: Generate
         run: make gen-all
 
+      - name: Slice routes
+        run: make slice-routes
+
       # Commit all changed files back to the repository
       - uses: stefanzweifel/git-auto-commit-action@v5

@@ -1,7 +1,7 @@
 ## keenetic antifilter routing
 [![Generate](https://github.com/shlima/keneetic-antifilter/actions/workflows/generate.yml/badge.svg)](https://github.com/shlima/keneetic-antifilter/actions/workflows/generate.yml)
 
-Автоматическая генерация правил роутинга для различных онлайн сервисов.
+Автоматическая генерация правил [роутинга](/routes) для различных онлайн сервисов.
 Используется для роутеров **keenetic**. Поддерживаемы сервисы:
 
 - [youtube.com](routes/youtube-ipv4.bat)

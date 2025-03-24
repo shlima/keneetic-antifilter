@@ -11,4 +11,13 @@ gen-facebook:
 
 # make build gen-chatgpt
 gen-chatgpt:
-	bin/antifilter chatgpt_cidr4.txt routes/chatgpt-ipv4.bat
+	bin/antifilter cidr/chatgpt_cidr4.txt routes/chatgpt-ipv4.bat
+
+# make build gen-medium
+gen-medium:
+	bin/antifilter cidr/medium_cidr4.txt routes/medium-ipv4.bat
+
+gen-all: gen-youtube
+gen-all: gen-facebook
+gen-all: gen-chatgpt
+gen-all: gen-medium

@@ -26,14 +26,8 @@ jobs:
       - name: Build
         run: make build
 
-      - name: Generate YouTube
-        run: make gen-youtube
-
-      - name: Generate Facebook
-        run: make gen-facebook
-
-      - name: Generate ChatGPT
-        run: make gen-chatgpt
+      - name: Generate
+        run: make gen-all
 
       # Commit all changed files back to the repository
       - uses: stefanzweifel/git-auto-commit-action@v5

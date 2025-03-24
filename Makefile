@@ -1,6 +1,9 @@
 build:
 	go build -o bin/antifilter cmd/main.go
 
+pull-vendors:
+	git submodule foreach git pull
+
 # make build gen-youtube
 gen-youtube:
 	echo > cidr4.full.ignore.txt

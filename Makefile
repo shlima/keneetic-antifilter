@@ -3,7 +3,11 @@ build:
 
 # make build gen-youtube
 gen-youtube:
-	bin/antifilter iplist-youtube/cidr4.txt routes/youtube-ipv4.bat
+	echo > cidr4.full.ignore.txt
+	cat iplist-youtube/cidr4.txt >> cidr4.full.ignore.txt
+	echo "\n" >> cidr4.full.ignore.txt
+	cat cidr/youtube_cidr4.txt >> cidr4.full.ignore.txt
+	bin/antifilter cidr4.full.ignore.txt routes/youtube-ipv4.bat
 
 # make build gen-facebook
 gen-facebook:

@@ -1,6 +1,7 @@
 name: Generate
 
 on:
+  pull_request:
   schedule:
     - cron: '0 4 * * *'
 

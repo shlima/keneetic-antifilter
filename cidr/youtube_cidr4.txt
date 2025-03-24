@@ -1,4 +1,4 @@
-# additions to iplist-youtube/cidr4.txt
+# additions to vendor/iplist-youtube/cidr4.txt
 # @refs https://gist.github.com/iamwildtuna/7772b7c84a11bf6e1385f23096a73a15
 
 ## YouTube CDN (статика)

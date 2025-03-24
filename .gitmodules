@@ -1,6 +1,6 @@
-[submodule "iplist-youtube"]
-	path = iplist-youtube
+[submodule "vendor/iplist-youtube"]
+	path = vendor/iplist-youtube
 	url = git@github.com:touhidurrr/iplist-youtube.git
-[submodule "facebook-ip-lists"]
-	path = facebook-ip-lists
+[submodule "vendor/facebook-ip-lists"]
+	path = vendor/facebook-ip-lists
 	url = git@github.com:SecOps-Institute/FacebookIPLists.git

@@ -24,11 +24,16 @@ gen-chatgpt:
 gen-medium:
 	bin/antifilter cidr/medium_cidr4.txt routes/medium-ipv4.bat
 
+# make build gen-rutracker
+gen-rutracker:
+	bin/antifilter cidr/rutracker_cidr4.txt routes/rutracker-ipv4.bat
+
 # make build gen-all slice-routes
 gen-all: gen-youtube
 gen-all: gen-facebook
 gen-all: gen-chatgpt
 gen-all: gen-medium
+gen-all: gen-rutracker
 
 slice-routes:
 	@rm routes/all-ipv4-*

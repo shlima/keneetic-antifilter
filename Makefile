@@ -2,7 +2,7 @@ build:
 	go build -o bin/antifilter cmd/main.go
 
 pull-vendors:
-	git submodule foreach git pull
+	git submodule update --init --recursive --remote -f
 
 # make build gen-youtube
 gen-youtube:

@@ -7,7 +7,7 @@ pull-vendors:
 # make build gen-youtube
 gen-youtube:
 	echo > cidr4.full.ignore.txt
-	cat vendor/iplist-youtube/cidr4.txt >> cidr4.full.ignore.txt
+	cat vendor/iplist-youtube/lists/cidr4.txt >> cidr4.full.ignore.txt
 	echo "\n" >> cidr4.full.ignore.txt
 	cat cidr/youtube_cidr4.txt >> cidr4.full.ignore.txt
 	bin/antifilter cidr4.full.ignore.txt routes/youtube-ipv4.bat

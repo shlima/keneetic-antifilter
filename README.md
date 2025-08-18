@@ -22,3 +22,13 @@
 который будет использован для тунелирования целевого трафика. 
 
 ![static routes](docs/static-routes-index.png)
+
+## Настройки DNS
+
+**Важно отключить DNS от провайдера** (`Internet` -> `Ethernet Cable` ->  Чекбокс: `Ignore DNSv4 from ISP`) и прописать в настройках роутера (`Internet Safety` -> `DNS configuration`) `DNS over TLS` или `DNS over HTTPS`. Это хорошая практика в не зависимости используете вы данные маршруты или нет.
+
+Пример Для `DNS Over TLS`
+- `1.1.1.1`, TLS Domain=cloudflare-dns.com
+- `1.0.0.1`, TLS Domain=cloudflare-dns.com
+- `8.8.8.8`, TLS Domain=dns.google
+- `8.8.4.4`, TLS Domain=dns.google

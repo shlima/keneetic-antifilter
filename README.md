@@ -25,7 +25,7 @@
 
 ## Настройки DNS
 
-**Важно отключить DNS от провайдера** (`Internet` -> `Ethernet Cable` ->  Чекбокс: `Ignore DNSv4 from ISP`) и прописать в настройках роутера (`Internet Safety` -> `DNS configuration`) `DNS over TLS` или `DNS over HTTPS`. Это хорошая практика в не зависимости используете вы данные маршруты или нет.
+**Важно отключить DNS от провайдера** (`Internet` -> `Ethernet Cable` ->  Чекбокс: `Ignore DNSv4 from ISP`) и прописать в настройках роутера (`Internet Safety` -> `DNS configuration`) `DNS over TLS` или `DNS over HTTPS`. Это хорошая практика независимо от того, используете вы эти маршруты или нет.
 
 Пример Для `DNS Over TLS`
 - `1.1.1.1`, TLS Domain=cloudflare-dns.com

@@ -10,6 +10,8 @@
 - [chatgpt.com](routes/chatgpt-ipv4.bat)
 - [medium.com](routes/medium-ipv4.bat)
 - [rutracker](routes/rutracker-ipv4.bat)
+- [cloudflare](routes/cloudflare-ipv4.bat)
+- [all](routes/all-ipv4-aa.bat)
 
 Правила [обновляются](https://github.com/shlima/keneetic-antifilter/actions/workflows/generate.yml) автоматически раз в сутки (при наличии изменений).
 

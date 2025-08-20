@@ -28,12 +28,18 @@ gen-medium:
 gen-rutracker:
 	bin/antifilter cidr/rutracker_cidr4.txt routes/rutracker-ipv4.bat
 
+# make build gen-cloudflare
+gen-cloudflare:
+	curl https://www.cloudflare.com/ips-v4 -o vendor/cloudflare/ipv-4.txt
+	bin/antifilter vendor/cloudflare/ipv-4.txt  routes/cloudflare-ipv4.bat
+
 # make build gen-all slice-routes
 gen-all: gen-youtube
 gen-all: gen-facebook
 gen-all: gen-chatgpt
 gen-all: gen-medium
 gen-all: gen-rutracker
+gen-all: gen-cloudflare
 
 slice-routes:
 	@rm routes/all-ipv4-*

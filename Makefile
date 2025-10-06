@@ -14,7 +14,7 @@ gen-youtube:
 
 # make build gen-facebook
 gen-facebook:
-	bin/antifilter vendor/facebook-ip-lists/facebook_ipv4_cidr_blocks.lst routes/facebook-ipv4.bat
+	bin/antifilter vendor/ipranges/facebook/ipv4_merged.txt routes/facebook-ipv4.bat
 
 # make build gen-chatgpt
 gen-chatgpt:

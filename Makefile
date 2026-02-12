@@ -3,6 +3,7 @@ build:
 
 pull-vendors:
 	git submodule update --init --recursive --remote -f
+	curl -s https://core.telegram.org/resources/cidr.txt | tr ' ' '\n' | awk '!/:/ {print} /:/{exit}' > cidr/telegram_cidr4.txt
 
 # make build gen-telegram
 gen-telegram:

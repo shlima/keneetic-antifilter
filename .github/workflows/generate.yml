@@ -1,7 +1,6 @@
 name: Generate
 
 on:
-  workflow_dispatch:
   push:
   schedule:
     - cron: '0 4 * * *'

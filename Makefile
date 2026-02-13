@@ -4,6 +4,11 @@ build:
 pull-vendors:
 	git submodule update --init --recursive --remote -f
 
+# make build gen-telegram
+gen-telegram:
+	curl -s -f https://core.telegram.org/resources/cidr.txt | grep -v ':' > vendor/telegram/telegram_cidr.txt
+	bin/antifilter vendor/telegram/telegram_cidr.txt routes/telegram-ipv4.bat
+
 # make build gen-youtube
 gen-youtube:
 	echo > cidr4.full.ignore.txt
@@ -40,6 +45,7 @@ gen-all: gen-chatgpt
 gen-all: gen-medium
 gen-all: gen-rutracker
 gen-all: gen-cloudflare
+gen-all: gen-telegram
 
 slice-routes:
 	@rm routes/all-ipv4-*

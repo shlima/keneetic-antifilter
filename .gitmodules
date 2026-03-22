@@ -4,3 +4,6 @@
 [submodule "vendor/ipranges"]
 	path = vendor/ipranges
 	url = https://github.com/lord-alfred/ipranges
+[submodule "vendor/iplist-claude"]
+	path = vendor/iplist-claude
+	url = https://github.com/superheher/iplist-claude.git

@@ -38,6 +38,10 @@ gen-cloudflare:
 	curl https://www.cloudflare.com/ips-v4 -o vendor/cloudflare/ipv-4.txt
 	bin/antifilter vendor/cloudflare/ipv-4.txt  routes/cloudflare-ipv4.bat
 
+# make build gen-claude
+gen-claude:
+	bin/antifilter vendor/iplist-claude/lists/cidr4.txt routes/claude-ipv4.bat
+
 # make build gen-all slice-routes
 gen-all: gen-youtube
 gen-all: gen-facebook
@@ -46,6 +50,7 @@ gen-all: gen-medium
 gen-all: gen-rutracker
 gen-all: gen-cloudflare
 gen-all: gen-telegram
+gen-all: gen-claude
 
 slice-routes:
 	@rm routes/all-ipv4-*

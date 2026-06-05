@@ -4,3 +4,4 @@ bin/*
 vendor/cloudflare/*
 vendor/telegram/*
 !.keep
+.DS_Store

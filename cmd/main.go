@@ -29,7 +29,8 @@ func main() {
 	}
 	defer output.Close()
 
-	convertor := convertion.New(input, output)
+	comment := convertion.CommentFromOutputPath(outputPath)
+	convertor := convertion.New(input, output, comment)
 
 LOOP:
 	for {

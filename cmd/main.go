@@ -29,13 +29,15 @@ func main() {
 	}
 	defer output.Close()
 
-	convertor := convertion.New(input, output)
+	comment := convertion.CommentFromOutputPath(outputPath)
+	convertor := convertion.New(input, output, comment)
 
 LOOP:
 	for {
 		err = convertor.Next()
 		switch {
 		case errors.Is(err, io.EOF):
+			fmt.Println("")
 			break LOOP
 		case err != nil:
 			panic(fmt.Errorf("failed to read line: %v", err))

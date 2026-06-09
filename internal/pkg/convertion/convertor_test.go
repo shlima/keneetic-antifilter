@@ -10,12 +10,16 @@ import (
 func runAll(t *testing.T, c *Convertor) {
 	t.Helper()
 	for {
-		err := c.Next()
+		line, err := c.Next()
 		if errors.Is(err, io.EOF) {
 			return
 		}
 		if err != nil {
 			t.Fatalf("Next returned error: %v", err)
+		}
+		err = c.Write(line)
+		if err != nil {
+			t.Fatalf("Write returned error: %v", err)
 		}
 	}
 }

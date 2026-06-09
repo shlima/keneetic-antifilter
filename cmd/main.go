@@ -32,16 +32,24 @@ func main() {
 	comment := convertion.CommentFromOutputPath(outputPath)
 	convertor := convertion.New(input, output, comment)
 
+	var line *convertion.Line
+
 LOOP:
 	for {
-		err = convertor.Next()
+		line, err = convertor.Next()
 		switch {
 		case errors.Is(err, io.EOF):
 			fmt.Println("")
 			break LOOP
 		case err != nil:
 			panic(fmt.Errorf("failed to read line: %v", err))
+		case line.Address.IP.IsLoopback() || line.Address.IP.IsPrivate():
+			fmt.Printf("> found local address: %s<", line.Address.IP.String())
+			continue LOOP
 		default:
+			if err = convertor.Write(line); err != nil {
+				panic(fmt.Errorf("failed to write line: %v", err))
+			}
 			fmt.Print(".")
 		}
 	}

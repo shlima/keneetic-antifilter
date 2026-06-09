@@ -39,31 +39,38 @@ func CommentFromOutputPath(outputPath string) string {
 	return strings.TrimSuffix(base, ".bat")
 }
 
-func (c *Convertor) Next() error {
+func (c *Convertor) Next() (*Line, error) {
 	line, err := c.reader.Next()
 	switch {
 	case errors.Is(err, io.EOF):
-		return io.EOF
+		return nil, io.EOF
 	case err != nil:
-		return err
+		return nil, err
 	case line == "":
-		return nil
+		return c.Next()
 	}
 
 	for i := range c.skipPrefixes {
 		if strings.HasPrefix(line, c.skipPrefixes[i]) {
-			return nil
+			return c.Next()
 		}
 	}
 
 	ip, err := cidr.Parse(line)
 	if err != nil {
-		return fmt.Errorf("failed to parse CIDR: %w", err)
+		return nil, fmt.Errorf("failed to parse CIDR: %w", err)
 	}
 
-	message := fmt.Sprintf("route ADD %s MASK %s 0.0.0.0", ip.IP.String(), ip.Mask.String())
-	if c.comment != "" {
-		message += " :: rem " + c.comment
+	return &Line{
+		Address: ip,
+		Comment: c.comment,
+	}, nil
+}
+
+func (c *Convertor) Write(line *Line) (err error) {
+	message := fmt.Sprintf("route ADD %s MASK %s 0.0.0.0", line.Address.IP.String(), line.Address.Mask.String())
+	if comment := line.Comment; comment != "" {
+		message += " :: rem " + comment
 	}
 
 	_, err = c.output.Write([]byte(message + "\n"))

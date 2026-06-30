@@ -364,7 +364,7 @@ route ADD 142.251.45.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
 route ADD 142.251.46.0 MASK 255.255.254.0 0.0.0.0 :: rem youtube
 route ADD 142.251.96.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
 route ADD 142.251.98.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
-route ADD 142.251.107.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
+route ADD 142.251.106.0 MASK 255.255.254.0 0.0.0.0 :: rem youtube
 route ADD 142.251.108.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
 route ADD 142.251.110.0 MASK 255.255.254.0 0.0.0.0 :: rem youtube
 route ADD 142.251.112.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube

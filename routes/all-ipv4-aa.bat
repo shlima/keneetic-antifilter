@@ -55,11 +55,6 @@ route ADD 173.252.64.0 MASK 255.255.192.0 0.0.0.0 :: rem facebook
 route ADD 179.60.192.0 MASK 255.255.252.0 0.0.0.0 :: rem facebook
 route ADD 185.60.216.0 MASK 255.255.252.0 0.0.0.0 :: rem facebook
 route ADD 185.89.216.0 MASK 255.255.252.0 0.0.0.0 :: rem facebook
-route ADD 189.233.203.0 MASK 255.255.255.0 0.0.0.0 :: rem facebook
-route ADD 189.233.216.0 MASK 255.255.255.0 0.0.0.0 :: rem facebook
-route ADD 189.247.40.0 MASK 255.255.255.0 0.0.0.0 :: rem facebook
-route ADD 189.247.50.0 MASK 255.255.255.0 0.0.0.0 :: rem facebook
-route ADD 189.247.71.0 MASK 255.255.255.0 0.0.0.0 :: rem facebook
 route ADD 196.49.68.0 MASK 255.255.254.0 0.0.0.0 :: rem facebook
 route ADD 199.201.64.0 MASK 255.255.252.0 0.0.0.0 :: rem facebook
 route ADD 204.15.20.0 MASK 255.255.252.0 0.0.0.0 :: rem facebook

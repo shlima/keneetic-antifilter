@@ -193,7 +193,7 @@ route ADD 114.43.24.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
 route ADD 114.250.63.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
 route ADD 114.250.64.0 MASK 255.255.254.0 0.0.0.0 :: rem youtube
 route ADD 114.250.67.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
-route ADD 114.250.69.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
+route ADD 114.250.68.0 MASK 255.255.254.0 0.0.0.0 :: rem youtube
 route ADD 114.250.70.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
 route ADD 115.126.100.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
 route ADD 116.89.243.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
@@ -375,6 +375,7 @@ route ADD 172.253.124.0 MASK 255.255.252.0 0.0.0.0 :: rem youtube
 route ADD 172.253.130.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
 route ADD 172.253.132.0 MASK 255.255.252.0 0.0.0.0 :: rem youtube
 route ADD 172.253.139.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
+route ADD 172.253.143.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
 route ADD 172.253.144.0 MASK 255.255.254.0 0.0.0.0 :: rem youtube
 route ADD 172.253.147.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
 route ADD 172.253.149.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
@@ -387,8 +388,7 @@ route ADD 173.194.12.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
 route ADD 173.194.22.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
 route ADD 173.194.28.0 MASK 255.255.254.0 0.0.0.0 :: rem youtube
 route ADD 173.194.31.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
-route ADD 173.194.40.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
-route ADD 173.194.42.0 MASK 255.255.254.0 0.0.0.0 :: rem youtube
+route ADD 173.194.40.0 MASK 255.255.252.0 0.0.0.0 :: rem youtube
 route ADD 173.194.44.0 MASK 255.255.254.0 0.0.0.0 :: rem youtube
 route ADD 173.194.47.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
 route ADD 173.194.49.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube

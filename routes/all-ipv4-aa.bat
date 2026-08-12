@@ -75,6 +75,7 @@ route ADD 91.105.192.0 MASK 255.255.254.0 0.0.0.0 :: rem telegram
 route ADD 91.108.20.0 MASK 255.255.252.0 0.0.0.0 :: rem telegram
 route ADD 185.76.151.0 MASK 255.255.255.0 0.0.0.0 :: rem telegram
 route ADD 4.78.139.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
+route ADD 11.11.11.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
 route ADD 23.101.24.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
 route ADD 23.202.231.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
 route ADD 23.217.138.0 MASK 255.255.255.0 0.0.0.0 :: rem youtube
